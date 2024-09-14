@@ -24,6 +24,6 @@
     "webpack-glob-entries": "^1.0.1"
   },
   "scripts": {
-    "bundle": "webpack"
+    "bundle": "tsc"
   }
 }
