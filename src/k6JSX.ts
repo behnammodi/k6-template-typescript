@@ -24,8 +24,13 @@ function createStack() {
 
 const stack = createStack();
 
-const caller = function (component, props, children) {
+const caller = function (component, props, ...children) {
+    console.log({
+        children
+    })
     stack.push(component, props);
+    // TODO: find my children and move to front of me
+    return [component, props]
 }
 
 const Fragment = function () {

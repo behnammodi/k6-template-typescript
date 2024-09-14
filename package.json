@@ -24,6 +24,7 @@
     "webpack-glob-entries": "^1.0.1"
   },
   "scripts": {
-    "bundle": "tsc"
+    "bundle": "tsc",
+    "run": "k6 run dist/test-3.js -vu 1 -d 1s"
   }
 }
