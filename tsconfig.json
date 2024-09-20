@@ -3,10 +3,9 @@
     "rootDir": "src",
     "outDir": "dist",
     "module": "ES6",
-    "jsx":"react",
-    "jsxFactory": "k6JSX.caller",
-    "jsxFragmentFactory": "k6JSX.Fragment"
-
+    "jsx": "react",
+    "jsxFactory": "JSX.createCall",
+    "jsxFragmentFactory": "JSX.Fragment"
   },
   "exclude": ["dist", "node_modules"]
 }
