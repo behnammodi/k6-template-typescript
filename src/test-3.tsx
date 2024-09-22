@@ -8,16 +8,16 @@ export let options: Options = {
   duration: "10s",
 };
 
-export default () => {
-  return (
+export default function App() {
+  return JSX.call(
     <HomePage name="BEHNAM 1">
       <HomePage name="BEHNAM 2" />
       <HomePage name="BEHNAM 3" />
     </HomePage>
   );
-};
+}
 
-function HomePage({ name }: { name: string }) {
+function HomePage({ name, children }: { name: string; children: any }) {
   const res = http.get("https://test-api.k6.io");
 
   console.log(name, res.status);
@@ -26,4 +26,6 @@ function HomePage({ name }: { name: string }) {
     "status is 200": () => res.status === 200,
   });
   sleep(1);
+
+  return children;
 }
