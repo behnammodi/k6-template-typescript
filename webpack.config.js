@@ -5,19 +5,19 @@ const GlobEntries = require('webpack-glob-entries');
 
 module.exports = {
   mode: 'production',
-  entry: GlobEntries('./src/*test*.ts'), // Generates multiple entry for each test
+  entry: GlobEntries('./src/*test*.tsx'), // Generates multiple entry for each test
   output: {
     path: path.join(__dirname, 'dist'),
     libraryTarget: 'commonjs',
     filename: '[name].js',
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx$/,
         use: 'babel-loader',
         exclude: /node_modules/,
       },
